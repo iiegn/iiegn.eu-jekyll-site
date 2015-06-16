@@ -1,0 +1,26 @@
+@misc{Stemle2015,
+    abstract = {Invited Talk at the first international research days (IRDs) on Social Media and CMC Corpora for the eHumanities, Rennes 2 University},
+    address = {Rennes, France},
+    author = {Stemle, Egon W.},
+    keywords = {upcoming},
+    mendeley-groups = {CV/presentations},
+    mendeley-tags = {upcoming},
+    month = oct,
+    shorttitle = {upcoming},
+    title = {{The DiDi Project: Collecting, Annotating, and Analysing South Tyrolean Data of Computer-mediated Communication.}},
+    type = {talk},
+    url = {http://ird-cmc-rennes.sciencesconf.org/},
+    year = {2015}
+}
+@misc{Stemle2013,
+    abstract = {Talk at the international workshop "Building Corpora of Computer-Mediated Communication: Issues, Challenges, and Perspectives", Department of German Language and Literature, Faculty of Culture Studies, TU Dortmund University},
+    address = {Dortmund, Germany},
+    author = {Stemle, Egon W. and Glaznieks, Aivars},
+    file = {:home/egon/Books/mndlyBooks/Stemle, Glaznieks/Unknown/Stemle, Glaznieks - 2013 - (Technical Aspects of) Harvesting Data from Social Network Sites.pdf:pdf},
+    mendeley-groups = {CV/presentations,Projects/2013\_DiDi,Synced},
+    month = feb,
+    title = {{(Technical Aspects of) Harvesting Data from Social Network Sites}},
+    type = {talk},
+    url = {https://www.researchgate.net/publication/259344708\_(Technical\_Aspects\_of)\_Harvesting\_Data\_from\_Social\_Network\_Sites?ev=prf\_pub},
+    year = {2013}
+}

@@ -1,0 +1,67 @@
+---
+- title: email
+  url: mailto:egon.stemle@eurac.edu
+  categories:
+      - work
+- title: email
+  url: mailto:quatsch@iiegn.de
+  categories:
+      - life
+- title: mendeley
+  url: https://www.mendeley.com/profiles/egon-stemle1
+  categories:
+      - work
+- title: researchgate
+  url: https://www.researchgate.net/profile/Egon_Stemle
+  categories:
+      - work
+- title: google-scholar
+  url: https://scholar.google.it/citations?user=uHqa8ooAAAAJ
+  categories:
+      - work
+- title: linkedin
+  url: https://www.linkedin.com/pub/egon-stemle/17/65/680
+  categories:
+      - work
+- title: github
+  url: https://github.com/iiegn
+  categories:
+      - life
+      - work
+- title: bitbucket
+  url: https://bitbucket.com/iiegn
+  categories:
+      - work
+- title: twitter
+  url: https://www.twitter.com/iiegn 
+  categories:
+      - life
+      - work
+- title: googleplus
+  url: https://plus.google.com/+egonstemle
+  categories:
+      - life
+      - work
+- title: panoramio
+  url: http://www.panoramio.com/user/4937670
+  categories:
+      - life
+
+# - title: flickr
+#   url: https://www.flickr.com/photos/53762240@N08/
+#   categories:
+#       - life
+# - title: youtube
+#   url: https://youtube.com/
+#   categories:
+#       - life
+# - title: dribble 
+#   url: https://dribbble.com/{{ site.footer-links.dribbble }}
+# - title: instagram
+#   url: https://instagram.com/
+# - title: pinterest
+#   url: https://www.pinterest.com/
+# - title: rss
+#   url: {{ site.baseurl }}/feed.xml
+# - title: stackoverflow
+#   url: http://stackoverflow.com/

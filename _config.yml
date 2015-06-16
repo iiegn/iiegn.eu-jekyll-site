@@ -1,0 +1,62 @@
+# Site settings
+title: iiegn.eu
+author: egon w. stemle
+email: egon@iiegn.eu
+description: "'quatsch' on my mind"
+#baseurl: "/jekyll" # the subpath of your site, e.g. /blog/
+url: "http://iiegn.eu" # the base hostname & protocol for your site
+
+# Build settings
+gems: 
+    - jekyll/scholar
+    - jekyll-sitemap
+    
+markdown: kramdown
+#markdown: redcarpet
+highlighter: pygments
+
+sass:
+    style: :compressed
+
+include: 
+    - .htaccess
+
+exclude:
+    - external/
+    - Rakefile
+    - README.md
+
+scholar:
+    style: _plugins/chicago-author-date.csl
+    locale: en
+  
+    sort_by: year
+    order: descending
+  
+    source: ./_bibliography
+    bibliography: references.bib
+    bibliography_template: "jekyll-scholar"
+    repository: assets/outputs
+  
+    replace_strings: true
+    join_strings:    true
+  
+    query: "@*"
+
+    bibtex_filters:
+        - latex
+        - htmllink
+
+    bibtex_skip_fields:
+        - abstract
+        - month_numeric
+        - annote
+        - file
+        - mendeley-groups
+        - mendeley-tags
+
+sitemap:
+    extensions:
+        - .html
+        - .pdf
+        - .ps

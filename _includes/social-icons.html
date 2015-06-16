@@ -1,0 +1,9 @@
+<ul class="social-media-list list-inline">
+    {% for icon in site.data.social-icons %}
+        {% for category in page.categories %}
+            {% if icon.categories contains category %}
+                <li><a href="{{ icon.url }}" target="_blank"><i class="social-icon {{ icon.title}}"></i></a></li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</ul>

@@ -1,0 +1,15 @@
+# temporary files, backups, etc.
+*.swp
+*.swo
+*~
+
+# jekyll specific
+_config_deploy.yml
+_site
+.sass-cache
+_last_deploy.txt
+/assets/outputs/
+/_bibliography/*.bib
+/external/
+google*.html
+_tmp

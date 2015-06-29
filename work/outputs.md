@@ -26,8 +26,8 @@ Bleeding Edge
 {% capture query_string %}{{ '@*[year>=' }}{{ current_year | minus:1 }}{{ '&& keywords != upcoming && keywords !=in Press]' }}{% endcapture %}
 {% bibliography --file publications --file presentations --file otheroutput --query {{ query_string }} %}
 
-Old Hats
---------
+Cutting Edge
+------------
 {% capture query_string %}{{ '@*[year<=' }}{{ current_year | minus:2 }}{{ '&& keywords != upcoming && keywords !=in Press]' }}{% endcapture %}
 {% bibliography --max 10 --file publications --file presentations --file otheroutput --query {{ query_string }} %}
 

@@ -15,8 +15,8 @@ categories:
 {% endcapture %}
 {{ pager_html }}
 
-Very Old Hats
--------------
+Leading Edge
+------------
 {% capture query_string %}{{ '@*[year<=' }}{{ current_year | minus:2 }}{{ '&& keywords != upcoming && keywords !=in Press]' }}{% endcapture %}
 {% bibliography --offset 11 --file publications --file presentations --file otheroutput --query {{ query_string }} %}
 

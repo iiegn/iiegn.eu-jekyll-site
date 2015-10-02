@@ -27,7 +27,7 @@ completely.
 
 This is [me@work](/work), how i got there
 [CV](https://github.com/iiegn/pub/raw/master/CV/CV_en.pdf), what i have been
-doing so far, [my visible output](/work/visible.html). See the bottom of the
+doing so far, [my visible output](/work/outputs.html). See the bottom of the
 page for more...
   </div>
   <div class="col-md-3 col-xs-12 text-center" markdown="1">

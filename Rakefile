@@ -78,7 +78,7 @@ task :build, [:deployment_configuration] => :clean do |t, args|
   if repo_match
       sh "./external/link_mndlbib_file.rb --target_dir #{repo_match[1]}  --bibfile _bibliography/presentations.bib"
       sh "./external/link_mndlbib_file.rb --target_dir #{repo_match[1]}  --bibfile _bibliography/publications.bib"
-      sh "./external/link_mndlbib_file.rb --target_dir #{repo_match[1]}  --bibfile _bibliography/otheroutput.bib"
+      sh "./external/link_mndlbib_file.rb --target_dir #{repo_match[1]}  --bibfile _bibliography/misc.bib"
   end
 
   jekyll("build --config _config.yml,#{config_file}")

@@ -17,7 +17,7 @@ categories:
 
 Leading Edge
 ------------
-{% capture query_string %}{{ '@*[year<=' }}{{ current_year | minus:2 }}{{ '&& mendeley-tags != upcoming && mendeley-tags != in Press && mendeley-tags != submitted]' }}{% endcapture %}
+{% capture query_string %}{{ '@*[year<=' }}{{ current_year | minus:2 }}{{ '&& publisher !~ (I|i)n Press|(S|s)ubmitted && type !~ (U|u)pcoming|(A|a)ccepted]'}}{% endcapture %}
 {% bibliography --offset 11 --file publications --file presentations --file misc --query {{ query_string }} %}
 
 {{ pager_html }}

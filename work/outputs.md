@@ -18,17 +18,17 @@ categories:
 
 Upcoming (or still Waiting)
 -----------------------------
-{% assign query_string = '@*[mendeley-tags ~= upcoming|in Press|submitted]' %}
+{% assign query_string = '@*[publisher ~= (I|i)n Press|(S|s)ubmitted || type ~= (U|u)pcoming|(A|a)ccepted]' %}
 {% bibliography --file publications --file presentations --file misc --query {{ query_string }} %}
 
 Bleeding Edge
 -------------
-{% capture query_string %}{{ '@*[year>=' }}{{ current_year | minus:1 }}{{ '&& mendeley-tags != upcoming && mendeley-tags != in Press && mendeley-tags != submitted]' }}{% endcapture %}
+{% capture query_string %}{{ '@*[year>=' }}{{ current_year | minus:1 }}{{ '&& publisher !~ (I|i)n Press|(S|s)ubmitted && type !~ (U|u)pcoming|(A|a)ccepted]' }}{% endcapture %}
 {% bibliography --file publications --file presentations --file misc --query {{ query_string }} %}
 
 Cutting Edge
 ------------
-{% capture query_string %}{{ '@*[year<=' }}{{ current_year | minus:2 }}{{ '&& mendeley-tags != upcoming && mendeley-tags != in Press && mendeley-tags != submitted]' }}{% endcapture %}
+{% capture query_string %}{{ '@*[year<=' }}{{ current_year | minus:2 }}{{ '&& publisher !~ (I|i)n Press|(S|s)ubmitted && type !~ (U|u)pcoming|(A|a)ccepted]' }}{% endcapture %}
 {% bibliography --max 10 --file publications --file presentations --file misc --query {{ query_string }} %}
 
 {{ pager_html }}

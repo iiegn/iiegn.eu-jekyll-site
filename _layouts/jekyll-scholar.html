@@ -26,8 +26,20 @@
                         <!-- <span class="caret"></span> -->
                     </button>
                 </div>
+                {% if entry.publisher contains "In Press" or
+                    entry.publisher contains "in Press" or
+                    entry.publisher contains "Submitted" or
+                    entry.publisher contains "submitted" or
+                    entry.type contains "Upcoming" or
+                    entry.type contains "upcoming" or
+                    entry.type contains "Accepted" or
+                    entry.type contains "accepted" %}
+                    {% assign button_is = "disabled" %}
+                {% else %}
+                    {% assign button_is = "enabled" %}
+                {% endif %}
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default btn-xs"
+                    <button type="button" class="btn btn-default btn-xs {{button_is }}"
                         data-toggle="collapse" aria-expanded="false"
                         aria-controls="collapsebib-{{ entry.key | slugify }}"
                         data-target="#collapsebib-{{ entry.key | slugify }}">

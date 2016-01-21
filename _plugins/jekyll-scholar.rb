@@ -28,7 +28,3 @@ module BibTeX
         end
     end
 end
-
-# cf. https://github.com/inukshuk/jekyll-scholar/issues/70
-# here used to be https://gist.github.com/iiegn/9784826af4b44bba93d1
-# now, moved to https://github.com/iiegn/jekyll-scholar/tree/iiegn/master

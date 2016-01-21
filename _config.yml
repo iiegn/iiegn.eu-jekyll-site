@@ -7,9 +7,7 @@ description: "'quatsch' on my mind"
 url: "http://iiegn.eu" # the base hostname & protocol for your site
 
 # Build settings
-gems: 
-    - jekyll/scholar
-    - jekyll-sitemap
+gems: [jekyll/scholar, jekyll-sitemap, nokogiri, text-hyphen]
     
 markdown: kramdown
 #markdown: redcarpet

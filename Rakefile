@@ -220,7 +220,7 @@ end
 
 # launch jekyll
 def jekyll(directives = '')
-  sh '${HOME}/.gem/ruby/1.9.1/bin/jekyll ' + directives
+  sh '${HOME}/.gem/ruby/2.0.0/bin/jekyll ' + directives
 end
 
 # check if there is another rake task running (in addition to this one!)

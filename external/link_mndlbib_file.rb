@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby2.0
 # encoding: utf-8
 #
 # accompany jekyll site-generator with jekyll-scholar and (mendeley) .bib files to

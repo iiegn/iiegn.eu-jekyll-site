@@ -16,19 +16,36 @@ categories:
 {% endcapture %}
 {{ pager_html }}
 
-Upcoming (or still Waiting)
------------------------------
 {% assign query_string = '@*[publisher ~= (I|i)n Press|(S|s)ubmitted || type ~= (U|u)pcoming|(A|a)ccepted]' %}
+{% capture res %}
 {% bibliography --file publications --file presentations --file misc --query {{ query_string }} %}
+{% endcapture %}
+{% if res.size > 50 %}
+Upcoming (or still Waiting) 
+-----------------------------
+{{ res }}
+{% endif %}
 
+
+{% capture query_string %}{{ '@*[year>=' }}{{ current_year | minus:1 }}{{ '&& publisher !~ (I|i)n Press|(S|s)ubmitted && type !~ (U|u)pcoming|(A|a)ccepted]' }}{% endcapture %}
+{% capture res %}
+{% bibliography --file publications --file presentations --file misc --query {{ query_string }} %}
+{% endcapture %}
+{% if res.size > 50 %}
 Bleeding Edge
 -------------
-{% capture query_string %}{{ '@*[year>=' }}{{ current_year | minus:1 }}{{ '&& publisher !~ (I|i)n Press|(S|s)ubmitted && type !~ (U|u)pcoming|(A|a)ccepted]' }}{% endcapture %}
-{% bibliography --file publications --file presentations --file misc --query {{ query_string }} %}
+{{ res }}
+{% endif %}
 
+
+{% capture query_string %}{{ '@*[year<=' }}{{ current_year | minus:2 }}{{ '&& publisher !~ (I|i)n Press|(S|s)ubmitted && type !~ (U|u)pcoming|(A|a)ccepted]' }}{% endcapture %}
+{% capture res %}
+{% bibliography --max 10 --file publications --file presentations --file misc --query {{ query_string }} %}
+{% endcapture %}
+{% if res.size > 50 %}
 Cutting Edge
 ------------
-{% capture query_string %}{{ '@*[year<=' }}{{ current_year | minus:2 }}{{ '&& publisher !~ (I|i)n Press|(S|s)ubmitted && type !~ (U|u)pcoming|(A|a)ccepted]' }}{% endcapture %}
-{% bibliography --max 10 --file publications --file presentations --file misc --query {{ query_string }} %}
+{{ res }}
+{% endif %}
 
 {{ pager_html }}

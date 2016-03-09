@@ -23,6 +23,8 @@ exclude:
     - external/
     - Rakefile
     - README.md
+    - Gemfile
+    - Gemfile.lock
 
 scholar:
     style: _plugins/chicago-author-date.csl

@@ -61,9 +61,9 @@
                         <!-- <span class="caret"></span> -->
                     </button>
                 </div>
-                {% if entry.type == 'talk' or entry.type == 'poster' or entry.type == 'magazine' %}
+                {% if entry.type contains 'talk' or entry.type contains 'poster' or entry.type == 'magazine' or entry.type contains 'lecture' %}
                 <div class="btn-group" role="group">
-                    <span class="label label-info">{{ entry.type | capitalize }}</span>
+                    <span class="label label-info">{{ entry.type }}</span>
                 </div>
                 {% endif %}
             </div>

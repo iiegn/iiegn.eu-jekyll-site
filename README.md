@@ -1,1 +1,3 @@
 # iiegn.eu-jekyll-site
+
+## run https://developers.google.com/speed/pagespeed/insights/ every now and then...

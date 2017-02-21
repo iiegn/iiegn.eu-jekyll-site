@@ -7,7 +7,14 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="author" content="{{ site.author }}">
 
-  <link rel="stylesheet" href="{{ "/css/mystyle.css" | prepend: site.baseurl }}">
+  <!-- Optimize CSS Delivery (suggest from PageSpeed Tools)
+      for implementation cf. https://www.sitepoint.com/inline-css-in-jekyll/ -->
+  {% capture mystyles %}
+  {% include mystyles.scss %}
+  {% endcapture %}
+  <style>
+  {{ mystyles | scssify }}
+  </style>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 

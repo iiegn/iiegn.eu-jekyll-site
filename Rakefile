@@ -105,7 +105,7 @@ task :deploy, [:deployment_configuration] => :build do |t, args|
     end
   
     deploy_dir = matchdata[1]
-    sh "rsync -pcrvz --delete _site/ #{deploy_dir}"
+    sh "rsync -pcrvz --copy-links --delete-during _site/ #{deploy_dir}"
     time = Time.new
     File.open("_last_deploy.txt", 'w') {|f| f.write(time) }
     %x{git add -A && git commit -m "autopush by Rakefile at #{time}" && git push} if $git_autopush

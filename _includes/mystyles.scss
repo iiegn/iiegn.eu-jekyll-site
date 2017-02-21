@@ -1,0 +1,73 @@
+/* mystyle.scss */
+
+/* override the bootstrap brand-primary colour */
+$brand-primary: #f00;
+
+/* import bootstrap */
+@import "bootstrap";
+
+body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar {
+   margin-bottom: 20px;
+   /* hack:vertically center non-mobile menu items */
+   .navbar-collapse {
+       padding-top: 15px;
+       padding-right: 0;
+   }
+}
+/* hack:use less space on mobile */
+.navbar-collapse.in, .navbar-collapse.collapsing {
+       padding-top: 0px;
+       padding-right: 25px;
+}
+.footer .navbar-nav {
+    padding-top: 15px;
+    & li {
+        padding-right: 0px;
+    }
+}
+.page-content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+/* avoid transition */
+.collapsing {
+    -webkit-transition: height 0;
+    -moz-transition: height 0;
+    -ms-transition: height 0;
+    -o-transition: height 0;
+    transition: height 0;
+    -webkit-transition: none;
+    transition: none;
+}
+/* scroll-bar-jump-protection */
+html {
+    overflow-y: scroll;
+}
+
+/* make sure bibliography entries (e.g. URLs) are cut off */
+.my-bibdiv {
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+
+/* hypehate: <some class="hyphenate">\{\{ content | hyphenate \}\}</some> */
+.hyphenate {
+    text-align: justify;
+    @include hyphens(manual);
+}
+
+/* avoid numbers in bib listing */
+ol.bibliography {
+    @include list-unstyled;
+}
+
+@import "social-icons";

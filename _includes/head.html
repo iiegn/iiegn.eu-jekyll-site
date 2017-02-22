@@ -11,15 +11,24 @@
   <!-- Optimize CSS Delivery (suggest from PageSpeed Tools)
       for implementation cf. https://www.sitepoint.com/inline-css-in-jekyll/ -->
   {% capture mystyles %}
-      {% include mystyles.scss %}
+  {% include mystyles.scss %}
   {% endcapture %}
+
   <style>
-      {{ mystyles | scssify }}
+  {{ mystyles | scssify | strip }}
   </style>
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
+  {% capture polyfill %}
+  {% include polyfill.min.js %}
+  {% endcapture %}
+  <script>{{ polyfill | strip }}</script>
+  {% comment %}
   <script src="/assets/js/polyfill.min.js"> </script>
+  {% endcomment %}
+
   <!--[if lt IE 9]>
       <script src="/assets/js/html5shiv.min.js"></script>
   <![endif]-->

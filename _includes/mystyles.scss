@@ -40,13 +40,11 @@ body {
 }
 /* avoid transition */
 .collapsing {
-    -webkit-transition: height 0;
+    -webkit-transition: height 0, -webkit-transform 0.1s;
     -moz-transition: height 0;
     -ms-transition: height 0;
     -o-transition: height 0;
-    transition: height 0;
-    -webkit-transition: none;
-    transition: none;
+    transition: height 0, transform 0.1s;
 }
 /* scroll-bar-jump-protection */
 html {

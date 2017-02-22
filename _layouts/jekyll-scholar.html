@@ -18,10 +18,13 @@
                     {% assign button_is = "enabled" %}
                 {% endif %}
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default btn-xs {{button_is }}"
+                    <button type="button" class="btn btn-default btn-xs {{ button_is }}"
+                        {% if button_is == "enabled" %}
                         data-toggle="collapse" aria-expanded="false"
                         aria-controls="collapseabstr-{{ entry.key | slugify }}"
-                        data-target="#collapseabstr-{{ entry.key | slugify }}">
+                        data-target="#collapseabstr-{{ entry.key | slugify }}"
+                        {% endif %}
+                        >
                         abstract
                         <!-- <span class="caret"></span> -->
                     </button>
@@ -42,9 +45,12 @@
                 {% endif %}
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-default btn-xs {{ button_is }}"
+                        {% if button_is == "enabled" %}
                         data-toggle="collapse" aria-expanded="false"
                         aria-controls="collapsebib-{{ entry.key | slugify }}"
-                        data-target="#collapsebib-{{ entry.key | slugify }}">
+                        data-target="#collapsebib-{{ entry.key | slugify }}"
+                        {% endif %}
+                        >
                         bibtex entry
                         <!-- <span class="caret"></span> -->
                     </button>
@@ -56,9 +62,12 @@
                 {% endif %}
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-default btn-xs {{ button_is }}"
+                        {% if button_is == "enabled" %}
                         data-toggle="collapse" aria-expanded="false"
                         aria-controls="collapseurl-{{ entry.key | slugify }}"
-                        data-target="#collapseurl-{{ entry.key | slugify }}">
+                        data-target="#collapseurl-{{ entry.key | slugify }}"
+                        {% endif %}
+                        >
                         link 
                         <!-- <span class="caret"></span> -->
                     </button>

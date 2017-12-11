@@ -7,6 +7,10 @@
   url: mailto:quatsch@iiegn.de
   categories:
       - life
+- title: orcid
+  url: http://orcid.org/0000-0002-7655-5526
+  categories:
+      - work
 - title: mendeley
   url: https://www.mendeley.com/profiles/egon-stemle1
   categories:
@@ -28,8 +32,8 @@
   categories:
       - life
       - work
-- title: bitbucket
-  url: https://bitbucket.com/iiegn
+- title: gitlab
+  url: https://gitlab.inf.unibz.it/egon.stemle
   categories:
       - work
 - title: twitter

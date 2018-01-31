@@ -19,6 +19,7 @@ sass:
 
 include: 
     - .htaccess
+    - .well-known
 
 exclude:
     - external/
